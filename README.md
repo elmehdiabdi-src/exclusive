@@ -1,11 +1,10 @@
-
 <p>
     <img src="./.github/splash.png" alt="Exclusive – Go API documentation generator" style="border-radius: 10px;"/>
 </p>
 
 # exclusive
 
-Generates API documentation for Go project. Without requiring you to manually write Swagger annotations. Docs are generated in OpenAPI 3.0.3 json format.
+Generates API documentation for Go [gin](https://github.com/gin-gonic/gin) project. Without requiring you to manually write Swagger annotations. Docs are generated in OpenAPI 3.0.3 json format.
 
 
 ## Introduction
