@@ -78,6 +78,8 @@ As you can see its like magic and feel safe.
 				Response:     new(LoginResponse),
 				Description:  "Endpoint to generate any token.",
 			})
+
+			// YOUR LOGIC GOES HERE :)
 		
 		})
 	}
