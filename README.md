@@ -1,9 +1,6 @@
-<p>
-    <img src="./.github/compare.png" alt="Exclusive – Go API documentation generator"/>
-</p>
 
 <p>
-    <img src="./.github/splash.png" alt="Exclusive – Go API documentation generator"/>
+    <img src="./.github/splash.png" alt="Exclusive – Go API documentation generator" style="border-radius: 10px;"/>
 </p>
 
 # exclusive
