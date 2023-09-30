@@ -7,6 +7,10 @@
 Generates API documentation for Go [gin](https://github.com/gin-gonic/gin) project. Without requiring you to manually write Swagger annotations. Docs are generated in OpenAPI 3.0.3 json format.
 
 
+## First
+
+Click star before start. <3
+
 ## Introduction
 
 The main motto of the project is generating your API documentation without requiring you to annotate your code.
