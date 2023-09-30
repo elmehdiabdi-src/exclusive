@@ -24,28 +24,28 @@ See [example](https://github.com/elmehdiabdi-src/exclusive/tree/main/example) th
 Serve static template to render doc and swagger json setup.
 
 ```go
-  // ...
-
+	// ...
+	
 	engine := gin.Default()
-
-  // Serve swagger template.
+	
+	// Serve swagger template.
 	engine.StaticFile("/docs", "./public/index.html")
-
-  // add
+	
+	// add
 	engine.GET("/swagger.json", func(c *gin.Context) {
-
+	
 		schema := exclusive.Swag(engine, c, &exclusive.Configure{
 			Responses: map[int]any{
 				429: &ErrorResponse{},
 				400: &ErrorResponse{},
 			},
 		})
-
+	
 		c.String(http.StatusOK, schema)
-
+	
 	})
-
-  // ...
+	
+	// ...
 
 ```
 
@@ -54,23 +54,22 @@ As you can see its like magic and feel safe.
 
 
 ```go
-  // ...
-v1 := engine.Group("api/v1")
-
+	// ...
+	v1 := engine.Group("api/v1")
+	
 	{
-
 		v1.POST("/login", func(c *gin.Context) {
-
+		
 			type LoginRequest struct {
 				Type     string `query:"type" binding:"required"`
 				Email    string `json:"email" binding:"required"`
 				Password string `json:"password" binding:"required"`
 			}
-
+		
 			type LoginResponse struct {
 				Token string `json:"token"`
 			}
-
+		
 			c.Set("doc", exclusive.Doc{
 				IsDeprecated: false,
 				Tags:         "Auth",
@@ -79,10 +78,10 @@ v1 := engine.Group("api/v1")
 				Response:     new(LoginResponse),
 				Description:  "Endpoint to generate any token.",
 			})
-
+		
 		})
 	}
-  // ...
+	// ...
 
 ```
 
